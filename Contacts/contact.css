@@ -1,0 +1,159 @@
+body {
+  padding: clamp(2rem, 6vw, 4rem) 1.5rem;
+  background:
+    radial-gradient(ellipse at 50% 12%, rgb(30 82 132 / 42%), transparent 48%),
+    radial-gradient(ellipse at 12% 90%, rgb(14 55 94 / 36%), transparent 42%),
+    linear-gradient(145deg, #071525 5%, #0b2037 52%, #06111f 100%);
+}
+
+header {
+  width: min(1000px, 100%);
+  margin-top: 0;
+}
+
+header nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem 1.5rem;
+}
+
+.page-contact {
+  width: min(1000px, 100%);
+  margin: clamp(2rem, 6vh, 3.5rem) auto 0;
+  padding-bottom: 1rem;
+}
+
+.introduction-contact {
+  padding: clamp(1.75rem, 5vw, 3rem);
+  margin-bottom: clamp(2rem, 6vw, 3.5rem);
+  border: 1px solid rgb(190 220 250 / 22%);
+  border-radius: 1.5rem;
+  background: rgb(163 199 235 / 9%);
+  box-shadow: 0 20px 60px rgb(0 0 0 / 18%);
+  text-align: center;
+  backdrop-filter: blur(12px);
+}
+
+.introduction-contact .surtitre {
+  margin: 0 0 0.75rem;
+  color: #9be8ef;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.introduction-contact h1 {
+  margin: 0 0 1.25rem;
+  font-size: clamp(2.25rem, 6vw, 3.5rem);
+  letter-spacing: -0.045em;
+  line-height: 1.1;
+}
+
+.introduction-contact > p:last-child {
+  max-width: 680px;
+  margin: 0 auto;
+  color: #dce8f5;
+  line-height: 1.8;
+}
+
+.coordonnees {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  margin-bottom: clamp(2rem, 6vw, 3.5rem);
+}
+
+.carte-contact {
+  min-width: 0;
+  padding: clamp(1.25rem, 3vw, 1.75rem);
+  border: 1px solid rgb(190 220 250 / 18%);
+  border-radius: 1rem;
+  background: rgb(163 199 235 / 8%);
+  box-shadow: 0 12px 35px rgb(0 0 0 / 14%);
+  transition:
+    transform 180ms ease,
+    background-color 180ms ease,
+    border-color 180ms ease;
+  backdrop-filter: blur(10px);
+}
+
+.carte-contact:hover {
+  transform: translateY(-3px);
+  border-color: rgb(108 191 255 / 42%);
+  background: rgb(163 199 235 / 12%);
+}
+
+.carte-contact h2 {
+  margin: 0 0 0.75rem;
+  color: #f5f8ff;
+  font-size: 1.15rem;
+}
+
+.carte-contact p {
+  margin: 0 0 1rem;
+  color: #d3e2f2;
+  line-height: 1.7;
+}
+
+.carte-contact a {
+  color: #9be8ef;
+  font-weight: 700;
+  overflow-wrap: anywhere;
+  text-decoration-color: rgb(155 232 239 / 55%);
+  text-underline-offset: 0.2em;
+}
+
+.carte-contact a:hover,
+.carte-contact a:focus-visible {
+  color: #ffffff;
+}
+
+.retour {
+  display: block;
+  width: fit-content;
+  max-width: 100%;
+  padding: 0.75rem 1.25rem;
+  margin: 0 auto;
+  border: 1px solid rgb(108 191 255 / 40%);
+  border-radius: 999px;
+  background: rgb(163 199 235 / 9%);
+  color: #f5f8ff;
+  font-weight: 700;
+  text-align: center;
+  text-decoration: none;
+  transition:
+    transform 180ms ease,
+    background-color 180ms ease;
+}
+
+.retour:hover,
+.retour:focus-visible {
+  transform: translateY(-2px);
+  background: rgb(46 116 177 / 25%);
+}
+
+@media (max-width: 760px) {
+  .coordonnees {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 520px) {
+  body {
+    padding-right: 1rem;
+    padding-left: 1rem;
+  }
+
+  .coordonnees {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .carte-contact,
+  .retour {
+    transition: none;
+  }
+}
