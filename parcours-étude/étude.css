@@ -1,0 +1,162 @@
+body {
+  padding: clamp(2rem, 6vw, 4rem) 1.5rem;
+  background:
+    radial-gradient(ellipse at 50% 12%, rgb(30 82 132 / 42%), transparent 48%),
+    radial-gradient(ellipse at 12% 90%, rgb(14 55 94 / 36%), transparent 42%),
+    linear-gradient(145deg, #071525 5%, #0b2037 52%, #06111f 100%);
+}
+
+header {
+  width: min(900px, 100%);
+  margin-top: 0;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+main {
+  width: min(900px, 100%);
+  margin: clamp(2rem, 6vh, 3.5rem) auto 0;
+  padding: 0 0 1rem;
+}
+
+.introduction-parcours {
+  padding: clamp(1.75rem, 5vw, 3rem);
+  margin-bottom: clamp(2.5rem, 7vw, 4rem);
+  border: 1px solid rgb(190 220 250 / 22%);
+  border-radius: 1.5rem;
+  background: rgb(163 199 235 / 9%);
+  box-shadow: 0 20px 60px rgb(0 0 0 / 18%);
+  text-align: center;
+  backdrop-filter: blur(12px);
+}
+
+.surtitre {
+  margin: 0 0 0.75rem;
+  color: #9be8ef;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.introduction-parcours h1 {
+  margin: 0 0 1.25rem;
+  color: #f7faff;
+  font-size: clamp(2.25rem, 6vw, 3.5rem);
+  letter-spacing: -0.045em;
+  line-height: 1.1;
+  text-align: center;
+  text-wrap: balance;
+}
+
+.introduction-parcours p:last-child {
+  max-width: 700px;
+  margin: 0 auto;
+  color: #dce8f5;
+  line-height: 1.8;
+}
+
+.parcours-professionnel,
+.etudes {
+  margin-bottom: clamp(2.5rem, 7vw, 4rem);
+}
+
+.parcours-professionnel h2,
+.etudes h2 {
+  margin: 0 0 1.5rem;
+  color: #f5f8ff;
+  font-size: clamp(1.6rem, 4vw, 2rem);
+  letter-spacing: -0.025em;
+  text-align: center;
+}
+
+.parcours-professionnel article,
+.etudes article {
+  padding: clamp(1.25rem, 4vw, 1.75rem);
+  margin-bottom: 1rem;
+  border: 1px solid rgb(190 220 250 / 18%);
+  border-left: 3px solid rgb(108 191 255 / 75%);
+  border-radius: 1rem;
+  background: rgb(163 199 235 / 8%);
+  box-shadow: 0 12px 35px rgb(0 0 0 / 14%);
+  transition:
+    transform 180ms ease,
+    background-color 180ms ease,
+    border-color 180ms ease;
+  backdrop-filter: blur(10px);
+}
+
+.parcours-professionnel article:hover,
+.etudes article:hover {
+  transform: translateY(-3px);
+  border-color: rgb(108 191 255 / 42%);
+  background: rgb(163 199 235 / 12%);
+}
+
+.parcours-professionnel article span,
+.etudes article span {
+  color: #9be8ef;
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.parcours-professionnel article h3,
+.etudes article h3 {
+  margin: 0.5rem 0;
+  color: #f5f8ff;
+  font-size: 1.15rem;
+}
+
+.parcours-professionnel article p,
+.etudes article p {
+  margin: 0;
+  color: #d3e2f2;
+  line-height: 1.75;
+}
+
+.retour {
+  display: block;
+  width: fit-content;
+  padding: 0.75rem 1.25rem;
+  margin: 0 auto;
+  border: 1px solid rgb(108 191 255 / 40%);
+  border-radius: 999px;
+  background: rgb(163 199 235 / 9%);
+  color: #f5f8ff;
+  font-weight: 700;
+  text-decoration: none;
+  transition:
+    transform 180ms ease,
+    background-color 180ms ease;
+}
+
+.retour:hover,
+.retour:focus-visible {
+  transform: translateY(-2px);
+  background: rgb(46 116 177 / 25%);
+}
+
+@media (max-width: 600px) {
+  body {
+    padding-right: 1rem;
+    padding-left: 1rem;
+  }
+
+  nav {
+    gap: 0.75rem 1.25rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}
